@@ -4,12 +4,29 @@ package pantin.diiage.org.chillindijon.Models;
  * Created by Jordan on 3/16/2018.
  */
 
-public class Place
+public class POI
 {
     private Location location;
     private String type;
 
-    public Place(String type, Location location)
+    public int getIdPoi() {
+        return idPoi;
+    }
+
+    public void setIdPoi(int idPoi) {
+        this.idPoi = idPoi;
+    }
+
+    private int idPoi;
+
+    public POI(int idPoi, String type, Location location)
+    {
+        this.idPoi = idPoi;
+        this.location = location;
+        this.type = type;
+    }
+
+    public POI(String type, Location location)
     {
         this.location = location;
         this.type = type;

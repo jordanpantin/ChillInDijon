@@ -9,10 +9,10 @@ import org.json.JSONObject;
 
 public class JSONParser
 {
-    public Place JsonToSignboard(JSONObject json) throws JSONException
+    public POI JsonToSignboard(JSONObject json) throws JSONException
     {
-        Place place = new Place(json.getString("type"), JsonToLocation(json.getJSONObject("location")));
-        return place;
+        POI POI = new POI(json.getString("type"), JsonToLocation(json.getJSONObject("location")));
+        return POI;
     }
 
     public Location JsonToLocation(JSONObject json) throws  JSONException
